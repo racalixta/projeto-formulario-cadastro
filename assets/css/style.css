@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --cor0: #6C63FF;
+    --cor1: #4F70E8;
+    --cor2: #57A7FF;
+    --cor3: #FFCB70;
+    --cor-sombra1: #504BBF;
+    --cor-sombra2: #363280;
+    --cor-sombra3: #1B1940;
+    --fonte-padrão: 'Inter', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--fonte-padrão);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor0), var(--cor-sombra3));
+}
+
+.container {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.39);
+    margin-top: 2em;
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor2);
+    padding: 1em;
+}
+
+.form-image img {
+    width: 90%;
+}
+
+.form-area {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 1em;
+}
+
+.form-header {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    width: 8em;
+    height: 2em;
+    background-color: var(--cor0);
+    padding: 0.1em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+}
+
+.login-button button:hover {
+    background-color: var(--cor-sombra1);
+}
+
+.form-header h1:after {
+    content: '';
+    display: block;
+    width: 13%;
+    height: 0.13em;
+    background-image: linear-gradient(to right, var(--cor-sombra2), var(--cor0), transparent);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px 50px 0px 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.8em;
+    position: relative;
+}
+
+.input-box input, .input-box select {
+    margin: .5em 0;
+    padding: .8em 1.2em;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #0000001c;
+    font-size: 1em;
+}
+
+.select select{
+    width: 262px;
+}
+
+.input-box select:invalid{
+    color: #000000be;
+}
+
+.input-box input:hover, .input-box select:hover{
+    background-color: #dddbdb75;
+}
+
+.input-box input:focus-visible, .input-box select:focus-visible {
+    outline: 2px solid var(--cor0);
+}
+
+.input-box label, .gender-title h2 {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.input-box i {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.input-box.select i {
+    right: 18px;
+}
+
+.input-box small {
+    position: absolute;
+    top: 5.5em;
+    left: 0px;
+    visibility: hidden;
+}
+
+/* ERROR & SUCCESS <<<<<<<<<<<<   */
+
+.input-box.success input, .input-box.success select {
+    outline: 2px solid #2ecc71;
+    margin-left: .2em;
+}
+
+.input-box.error input, .input-box.error select {
+    outline: 2px solid #e74c3c;
+    margin-left: .2em;
+}
+
+.input-box.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.input-box.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.input-box.error small {
+    visibility: visible;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.3em;
+    padding: 0 0.6em;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.4em;
+}
+
+.gender-input label {
+    font-size: 1em;
+    font-weight: 400;
+    color: #000000c0;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 3em;
+    border: none;
+    background-color: var(--cor0);
+    padding: .9em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.continue-button button:hover {
+    background-color: var(--cor-sombra1);
+}
+
+footer{
+    width: 100%;    
+    
+}
+
+.footer-text {
+    color: whitesmoke;
+    font-size: .8em;
+    text-align: center;
+    padding: .5em;
+}
+
+.footer-text a {
+    color: var(--cor0);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+    color: var(--cor2);
+}
+
+@media screen and (max-width: 1391px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .form-area {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .form-image {
+        display: none;
+    }    
+
+    .container {
+        width: 90%;
+    }
+
+    .form-area {
+        width: 100%;
+
+    }
+
+    .form-header {
+        margin-bottom: 2em;
+    }
+
+    .continue-button{
+        margin-top: 1.5em;
+    }
+}
+
+@media screen and (max-width: 970px) {
+
+    .container {
+        width: 80%;
+        height: auto;
+    }
+
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 3em;
+        max-height: 27em;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .form {
+        width: 90%;
+    }
+
+    .form-header {
+        margin-bottom: 1em;
+    }
+
+    
+
+    .gender-area {
+        margin-top: 0.3em;
+    }
+
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h2 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 710px) {
+
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .input-group {
+        max-height: 22em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .input-group {
+        padding-right: 1em;
+    }
+}
